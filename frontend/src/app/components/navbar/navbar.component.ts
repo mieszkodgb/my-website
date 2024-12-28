@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { trigger, style, animate, transition } from '@angular/animations';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +17,8 @@ export class NavbarComponent {
   }
 
   // Optional: Close menu when clicking outside
-  closeMenu() {
-    this.isMenuOpen = false;
+  constructor(private router: Router) {}
+  isActive(route: string): boolean {
+    return this.router.url === route;
   }
 }
