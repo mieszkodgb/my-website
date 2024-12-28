@@ -1,0 +1,60 @@
+<div class="min-h-screen bg-gray-50 pt-24 pb-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Personal Introduction -->
+      <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">About Me</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Hello! I'm a passionate software developer with a keen interest in technology and innovation. 
+          With experience spanning multiple programming languages and frameworks, I enjoy tackling complex 
+          problems and creating efficient solutions. Beyond coding, I'm an enthusiastic learner who believes 
+          in continuous improvement and staying current with emerging technologies. When I'm not writing code, 
+          you can find me exploring new programming languages, contributing to open-source projects, or sharing 
+          knowledge with the developer community.
+        </p>
+      </div>
+  
+      <!-- Two Column Layout for Charts and Skills -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Personality Traits Chart -->
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Personal Traits</h2>
+          <div class="w-full">
+            <canvas id="personalityChart"></canvas>
+          </div>
+        </div>
+  
+        <!-- Language Skills -->
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Language Skills</h2>
+          <div class="space-y-6">
+            <div *ngFor="let skill of languageSkills" class="space-y-2">
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-lg font-medium text-gray-900">{{ skill.language }}</span>
+                  <span class="ml-2 text-sm font-medium text-gray-500">({{ skill.level }})</span>
+                </div>
+                <span class="text-sm text-gray-500">{{ skill.description }}</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div 
+                  class="bg-blue-500 h-2.5 rounded-full transition-all duration-500" 
+                  [style.width]="skill.percentage + '%'">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tech Stack Footer -->
+    <div class="bg-white rounded-xl shadow-md p-6 text-center">
+        <p class="text-gray-600">
+          This website was crafted with 
+          <a href="https://angular.io" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-600 font-medium">Angular</a> 
+          and 
+          <a href="https://tailwindcss.com" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-600 font-medium">Tailwind CSS</a>.
+          As a backend developer, I got some help from AI to make it look nice! 
+          <span class="inline-block ml-1 transform hover:scale-110 transition-transform duration-200">😊</span>
+        </p>
+      </div>
+    </div>
+  </div>
