@@ -5,17 +5,20 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
 jobs:
   build:
-  - uses: actions/checkout@v4
-  - uses: actions/setup-node@v4
-  with:
-    node-version: 22
+    runs-on: ubuntu-latest
     name: Build
-    - uses: actions/checkout@v3
     steps:
-      - run: npm install -g @angular/cli
-      - run: npm run build
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install -g @angular/cli
+      - name: Build
+        run: npm run build
   # test:
   # needs: [test]
   #   name: Testing
