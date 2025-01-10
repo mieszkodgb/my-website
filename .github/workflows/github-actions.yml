@@ -7,7 +7,10 @@ on:
     branches: [ main ]
 jobs:
   build:
-    runs-on: node:22-slim
+  - uses: actions/checkout@v4
+  - uses: actions/setup-node@v4
+  with:
+    node-version: 22
     name: Build
     - uses: actions/checkout@v3
     steps:
