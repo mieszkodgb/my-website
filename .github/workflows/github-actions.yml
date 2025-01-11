@@ -16,13 +16,11 @@ jobs:
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm install -g @angular/cli
+        run: cd frontend && npm install && npm install -g @angular/cli
       - name: Build
-        run: npm run build
-  # test:
-  # needs: [test]
-  #   name: Testing
-
-  # deploy:
-  #   needs: [build, test]
-  #   name: Deployment
+        run: cd frontend && ng build --configuration production --base-href https://mieszkodgb.github.io/my-website/
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: /home/runner/work/my-website/my-website/frontend/dist/frontend
