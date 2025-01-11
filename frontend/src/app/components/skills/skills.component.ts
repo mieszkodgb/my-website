@@ -18,62 +18,62 @@ export class SkillsComponent {
   skills: Skill[] = [
     {
       name: 'Python',
-      logo: 'assets/logos/python.png',
+      logo: 'logos/python.png',
       url: 'https://python.org'
     },
     {
       name: 'Rust',
-      logo: 'assets/logos/rust.png',
+      logo: 'logos/rust.png',
       url: 'https://rust-lang.org'
     },
     {
       name: 'Ansible',
-      logo: 'assets/logos/ansible.png',
+      logo: 'logos/ansible.png',
       url: 'https://ansible.com'
     },
     {
       name: 'Docker',
-      logo: 'assets/logos/docker.png',
+      logo: 'logos/docker.png',
       url: 'https://docker.com'
     },
     {
       name: 'Angular',
-      logo: 'assets/logos/angular.png',
+      logo: 'logos/angular.png',
       url: 'https://angular.io'
     },
     {
       name: 'GitLab CI/CD',
-      logo: 'assets/logos/gitlab.png',
+      logo: 'logos/gitlab.png',
       url: 'https://gitlab.com'
     },
     {
       name: 'GitHub Actions',
-      logo: 'assets/logos/github-actions.png',
+      logo: 'logos/github.png',
       url: 'https://github.com/features/actions'
     },
     {
       name: 'PostgreSQL',
-      logo: 'assets/logos/postgresql.png',
+      logo: 'logos/postgresql.png',
       url: 'https://postgresql.org'
     },
     {
       name: 'SQLite',
-      logo: 'assets/logos/sqlite.png',
+      logo: 'logos/sqlite.png',
       url: 'https://sqlite.org'
     },
     {
       name: 'Raspberry Pi',
-      logo: 'assets/logos/raspberry-pi.png',
+      logo: 'logos/raspberrypi.png',
       url: 'https://raspberrypi.org'
     },
     {
       name: 'Arduino',
-      logo: 'assets/logos/arduino.png',
+      logo: 'logos/arduino.png',
       url: 'https://arduino.cc'
     },
     {
       name: 'Git',
-      logo: 'assets/logos/git.png',
+      logo: 'logos/git.png',
       url: 'https://git-scm.com'
     }
   ];
